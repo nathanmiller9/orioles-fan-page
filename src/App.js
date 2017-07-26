@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import { Jumbotron, Button } from 'react-bootstrap';
-import Home from './Home/Home';
-import Header from './Header/Header';
+import Home from './components/Home/Home';
+import Header from './components/Header/Header';
+import PageFinder from './components/PageFinder/PageFinder';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div id="app">
         <Header />
         <Home />
+        <PageFinder />
       </div>
     );
   }

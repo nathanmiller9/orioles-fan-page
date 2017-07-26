@@ -1,7 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import convert from 'xml-to-json-promise';
-import { Jumbotron, Button } from 'react-bootstrap';
+import { Col, Jumbotron, Button } from 'react-bootstrap';
+import './Home.css';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 
 class Home extends React.Component {
@@ -9,22 +11,31 @@ class Home extends React.Component {
 		mlb: [],
 		avg: "",
 		hr: "",
-		rbi: ""
-	};
+		rbi: "",
+		h: "",
+		ab: "",
+		player: ""
+	}; 
+    
 	componentWillMount(){
 		let that = this;
+		let year = "year_" + moment().format('YYYY');
+		let month = "month_" + moment().format('MMMM');
+		let day = "day_" + moment().format('DD');
+		console.log(year);
+		console.log(month);
+		console.log(day);
 		axios.get('http://gd2.mlb.com/components/game/mlb/year_2017/batters/430945.xml')
 		.then(function(response) {
 			that.setState( { mlb: response.data } );
 			convert.xmlDataToJSON(that.state.mlb).then(json => {
 				console.log(json);
 				console.log(json.batting);
-				console.log(json.batting.$["avg"]);
-				console.log(json.batting.$["s_hr"]);
-				console.log(json.batting.$["s_rbi"]);
 				that.setState( {avg: json.batting.$["avg"] } );
 				that.setState( {hr: json.batting.$["s_hr"] } );
 				that.setState( {rbi: json.batting.$["s_rbi"] } );
+				that.setState( {h: json.batting.$["s_h"] } );
+				that.setState( {ab: json.batting.$["s_ab"] } );
 			});
 			console.log(that.state.mlb);
 		})
@@ -34,16 +45,15 @@ class Home extends React.Component {
 	}
 	render() {
 		return (
-			<div>
-				<Jumbotron>
-				    <h1>O's</h1>
-				    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-				    <p><Button bsStyle="primary">Learn more</Button></p>
-				</Jumbotron>
-				<h1>Let's Go O's!!!!</h1>
-				<p>{ this.state.avg } </p>
-				<p>{ this.state.hr } </p>
-				<p>{ this.state.rbi } </p>
+			<div className="home">
+				<Col className xs={4} sm={4} md={4} lg={4}>
+					<h1>Adam Jones</h1>
+					<p>{ this.state.avg } </p>
+					<p>{ this.state.hr } </p>
+					<p>{ this.state.rbi } </p>
+					<p>{ this.state.h } </p>
+					<p>{ this.state.ab } </p>
+				</Col>
 			</div>
 			)
 	}
