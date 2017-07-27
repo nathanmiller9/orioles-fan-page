@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import PageFinder from './components/PageFinder/PageFinder';
+import News from './components/News/News';
 
 
 class App extends Component {
@@ -11,6 +12,7 @@ class App extends Component {
         <Header />
         <Home />
         <PageFinder />
+        <News />
       </div>
     );
   }
