@@ -18,59 +18,6 @@ class PageFinder extends React.Component {
 		player: ""
 	}; 
 	componentWillMount(){
-		var batters = [
-		{	name: "Adam Jones",
-			id: "430945"
-		},
-		{ 	name: "Hyun Soo Kim",
-			id: "547957"
-		},
-		{ 	name: "Manny Machado",
-			id: "592518"
-		},
-		{	name: "Mark Trumbo",
-			id: "444432"
-		},
-		{	name: "Chris Davis",
-			id: "448801"
-		},
-		{	name: "Seth Smith",
-			id: "452234"
-		},
-		{	name: "Welington Castillo",
-			id: "456078"
-		},
-		{	name: "Caleb Joseph",
-			id: "543376"
-		},
-		{	name: "Jonathan Schoop",
-			id: "570731"
-		},
-		{	name: "Joey Rickard",
-			id: "572073"
-		},
-		{	name: "Trey Mancini", 
-			id: "641820"
-		}	
-		];
-
-		var pitchers = {
-		"ubaldoJimenez": "434622",
-		"wadeMiley": "489119",
-		"chrisTillman": "501957",
-		"zachBritton": "502154",
-		"darrenOday": "503285",
-		"richardBleier": "542947",
-		"bradBrach": "542960",
-		"mychalGivens": "571710",
-		"kevinGausman": "592332",
-		"dylanBundy": "605164",
-		"miguelCastro": "612434",
-		"donnieHart": "643354"
-		};
-
-
-		
 				let that = this;
 				let year = "year_" + moment().format('YYYY');
 				let month = "month_" + moment().format('MM');
@@ -99,23 +46,11 @@ class PageFinder extends React.Component {
 				}
 				
 				
-					axios.get('http://gd2.mlb.com/components/game/mlb/' + year + '/' + month + '/' + day + '/gid_' + gameId + '/batters/' + batters[0]["id"] + '.xml')
-			
-		.then(function(response) {
-			console.log(response);
-			that.setState( { mlb: response.data } );
-			convert.xmlDataToJSON(that.state.mlb).then(json => {
-				console.log(json);
-			});
-			console.log(that.state.mlb);
-			})
-		.catch(function (error) {
-			console.log(error);
-		});
+					
 						
 		})
 
-			
+
 		.catch(function (error) {
 			console.log(error);
 		});
