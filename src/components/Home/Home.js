@@ -356,52 +356,6 @@ class Home extends React.Component {
 
 		})
 
-		axios.get('http://gd2.mlb.com/components/game/mlb/year_2017/batters/' + batters[10]["id"] + '.xml')
-		.then(function(response) {
-			that.setState( { mlb: response.data } );
-			convert.xmlDataToJSON(that.state.mlb).then(json => {
-				console.log(json);
-				console.log(json.batting);
-				that.setState( {wc_avg: json.batting.$["avg"] } );
-				that.setState( {wc_hr: json.batting.$["s_hr"] } );
-				that.setState( {wc_rbi: json.batting.$["s_rbi"] } );
-				that.setState( {wc_h: json.batting.$["s_h"] } );
-				that.setState( {wc_ab: json.batting.$["s_ab"] } );
-		
-			console.log(that.state.mlb);
-		})
-
-		.catch(function(error) {
-			console.log(error);
-		});
-
-
-		})
-
-		axios.get('http://gd2.mlb.com/components/game/mlb/year_2017/batters/' + batters[10]["id"] + '.xml')
-		.then(function(response) {
-			that.setState( { mlb: response.data } );
-			convert.xmlDataToJSON(that.state.mlb).then(json => {
-				console.log(json);
-				console.log(json.batting);
-				that.setState( {wc_avg: json.batting.$["avg"] } );
-				that.setState( {wc_hr: json.batting.$["s_hr"] } );
-				that.setState( {wc_rbi: json.batting.$["s_rbi"] } );
-				that.setState( {wc_h: json.batting.$["s_h"] } );
-				that.setState( {wc_ab: json.batting.$["s_ab"] } );
-		
-			console.log(that.state.mlb);
-		})
-
-		.catch(function(error) {
-			console.log(error);
-		});
-
-
-		})
-
-
-
 		.catch(function (error) {
 			console.log(error);
 		});
