@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import convert from 'xml-to-json-promise';
-import { Col, Jumbotron, Button } from 'react-bootstrap';
+import { Col, Table } from 'react-bootstrap';
 import './Home.css';
 import moment from 'moment';
 import PropTypes from 'prop-types';
@@ -363,6 +363,144 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div className="home">
+				<Table responsive>
+    <thead>
+      <tr>
+        <th className="playerHead">Player</th>
+        <th>Average</th>
+        <th>RBI</th>
+        <th>HR</th>
+        <th>H</th>
+        <th>AB</th>
+        <th>Average</th>
+        <th>RBI</th>
+        <th>HR</th>
+        <th>H</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Adam Jones</td>
+        <td>{ this.state.aj_avg } </td>
+        <td>{ this.state.aj_hr } </td>
+        <td>{ this.state.aj_rbi } </td>
+        <td>{ this.state.aj_h }</td>
+        <td>{ this.state.aj_ab } </td>
+        <td>{ this.state.aj_avg } </td>
+        <td>{ this.state.aj_hr } </td>
+        <td>{ this.state.aj_rbi } </td>
+        <td>{ this.state.aj_h }</td>
+      </tr>
+      <tr>
+        <td>Manny Machado</td>
+        <td>{ this.state.mm_avg } </td>
+        <td>{ this.state.mm_hr } </td>
+        <td>{ this.state.mm_rbi } </td>
+        <td>{ this.state.mm_h }</td>
+        <td>{ this.state.mm_ab } </td>
+        <td>{ this.state.mm_avg } </td>
+        <td>{ this.state.mm_hr } </td>
+        <td>{ this.state.mm_rbi } </td>
+        <td>{ this.state.mm_h }</td>
+      </tr>
+      <tr>
+        <td>Jonathan Schoop</td>
+        <td>{ this.state.js_avg } </td>
+        <td>{ this.state.js_hr } </td>
+        <td>{ this.state.js_rbi } </td>
+        <td>{ this.state.js_h }</td>
+        <td>{ this.state.js_ab } </td>
+        <td>{ this.state.js_avg } </td>
+        <td>{ this.state.js_hr } </td>
+        <td>{ this.state.js_rbi } </td>
+        <td>{ this.state.js_h }</td>
+      </tr>
+      <tr>
+        <td>Chris Davis</td>
+        <td>{ this.state.cd_avg } </td>
+        <td>{ this.state.cd_hr } </td>
+        <td>{ this.state.cd_rbi } </td>
+        <td>{ this.state.cd_h }</td>
+        <td>{ this.state.cd_ab } </td>
+        <td>{ this.state.cd_avg } </td>
+        <td>{ this.state.cd_hr } </td>
+        <td>{ this.state.cd_rbi } </td>
+        <td>{ this.state.cd_h }</td>
+      </tr>
+      <tr>
+        <td>Mark Trumbo</td>
+        <td>{ this.state.mt_avg } </td>
+        <td>{ this.state.mt_hr } </td>
+        <td>{ this.state.mt_rbi } </td>
+        <td>{ this.state.mt_h }</td>
+        <td>{ this.state.mt_ab } </td>
+        <td>{ this.state.mt_avg } </td>
+        <td>{ this.state.mt_hr } </td>
+        <td>{ this.state.mt_rbi } </td>
+        <td>{ this.state.mt_h }</td>
+      </tr>
+      <tr>
+        <td>Trey Mancini</td>
+        <td>{ this.state.tm_avg } </td>
+        <td>{ this.state.tm_hr } </td>
+        <td>{ this.state.tm_rbi } </td>
+        <td>{ this.state.tm_h }</td>
+        <td>{ this.state.tm_ab } </td>
+        <td>{ this.state.tm_avg } </td>
+        <td>{ this.state.tm_hr } </td>
+        <td>{ this.state.tm_rbi } </td>
+        <td>{ this.state.tm_h }</td>
+      </tr>
+      <tr>
+        <td>Welington Castillo</td>
+        <td>{ this.state.wc_avg } </td>
+        <td>{ this.state.wc_hr } </td>
+        <td>{ this.state.wc_rbi } </td>
+        <td>{ this.state.wc_h }</td>
+        <td>{ this.state.wc_ab } </td>
+        <td>{ this.state.wc_avg } </td>
+        <td>{ this.state.wc_hr } </td>
+        <td>{ this.state.wc_rbi } </td>
+        <td>{ this.state.wc_h }</td>
+      </tr>
+      <tr>
+        <td>Seth Smith</td>
+        <td>{ this.state.ss_avg } </td>
+        <td>{ this.state.ss_hr } </td>
+        <td>{ this.state.ss_rbi } </td>
+        <td>{ this.state.ss_h }</td>
+        <td>{ this.state.ss_ab } </td>
+        <td>{ this.state.ss_avg } </td>
+        <td>{ this.state.ss_hr } </td>
+        <td>{ this.state.ss_rbi } </td>
+        <td>{ this.state.ss_h }</td>
+      </tr>
+      <tr>
+        <td>Joey Rickard</td>
+        <td>{ this.state.jr_avg } </td>
+        <td>{ this.state.jr_hr } </td>
+        <td>{ this.state.jr_rbi } </td>
+        <td>{ this.state.jr_h }</td>
+        <td>{ this.state.jr_ab } </td>
+        <td>{ this.state.jr_avg } </td>
+        <td>{ this.state.jr_hr } </td>
+        <td>{ this.state.jr_rbi } </td>
+        <td>{ this.state.jr_h }</td>
+      </tr>
+      <tr>
+        <td>Caleb Joseph</td>
+        <td>{ this.state.cj_avg } </td>
+        <td>{ this.state.cj_hr } </td>
+        <td>{ this.state.cj_rbi } </td>
+        <td>{ this.state.cj_h }</td>
+        <td>{ this.state.cj_ab } </td>
+        <td>{ this.state.cj_avg } </td>
+        <td>{ this.state.cj_hr } </td>
+        <td>{ this.state.cj_rbi } </td>
+        <td>{ this.state.cj_h }</td>
+      </tr>
+    </tbody>
+  </Table>
 				<Col className xs={4} sm={4} md={4} lg={4}>
 					<h1>Adam Jones</h1>
 					<p>{ this.state.aj_avg } </p>

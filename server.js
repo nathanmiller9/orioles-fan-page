@@ -3,13 +3,16 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var cheerio = require('cheerio');
 var request = require('request');
+var cookieParser = require('cookie-parser');
 var expressValidator = require('express-validator');
 var session = require('express-session');
+var promisify = require('es6-promisify');
 
 var app = express();
 // BodyParser Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
 
 // Set Static Folder
 app.use(express.static(path.join(__dirname, 'public')));

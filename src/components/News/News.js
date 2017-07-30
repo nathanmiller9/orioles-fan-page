@@ -9,7 +9,7 @@ class News extends Component {
   }
   componentWillMount(){
   	let that = this;
-  	axios.get('http://localhost:3000/cChatResult2').then(function (response) {
+  	axios.get('http://localhost:3001/cChatResult2').then(function (response) {
   		that.setState({result:response.data})
   	}).catch(function (err) {
     console.log(err);
