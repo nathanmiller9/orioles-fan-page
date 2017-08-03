@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
-import PageFinder from './components/PageFinder/PageFinder';
 import News from './components/News/News';
+import BSun from './components/News/bsun';
+import MASN from './components/News/masn';
 
 
 class App extends Component {
@@ -11,7 +12,8 @@ class App extends Component {
       <div id="app">
         <Header />
         <Home />
-        <PageFinder />
+        <MASN />
+        <BSun />
         <News />
       </div>
     );

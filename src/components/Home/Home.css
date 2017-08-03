@@ -3,10 +3,16 @@
 }
 
 td {
-	text-align: left;
-	width: 9%;
+	text-align: center;
+	width: 6%;
+}
+
+th {
+	text-align: center;
+	width: 6%;
 }
 
 .playerHead {
 	width: 13%;
+	text-align: left;
 }

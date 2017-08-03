@@ -4,7 +4,6 @@ import { BrowserRouter, Match, Miss } from 'react-router';
 import App from './App';
 import News from './components/News/News';
 import './index.css';
-
 import registerServiceWorker from './registerServiceWorker';
 import NotFound from './components/NotFound';
 import Home from './components/Home/Home';
