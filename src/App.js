@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import News from './components/News/News';
 import BSun from './components/News/bsun';
 import MASN from './components/News/masn';
+import PageFinder from './components/PageFinder/PageFinder';
 
 
 class App extends Component {
@@ -11,6 +12,7 @@ class App extends Component {
     return (
       <div id="app">
         <Header />
+        <PageFinder />
         <Home />
         <MASN />
         <BSun />
