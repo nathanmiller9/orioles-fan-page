@@ -1,7 +1,7 @@
 import React from 'react';
+import { Col, Table } from 'react-bootstrap';
 import axios from 'axios';
 import convert from 'xml-to-json-promise';
-import { Table } from 'react-bootstrap';
 import './Home.css';
 import moment from 'moment';
 import PropTypes from 'prop-types';
@@ -783,7 +783,8 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div className="home">
-			<h1>Batters</h1>
+			<Col className="stats" xs={8} sm={8} md={8} lg={8}>
+			<h3>Batting Statistics</h3>
 				<Table responsive>
     <thead>
       <tr>
@@ -1158,6 +1159,7 @@ class Home extends React.Component {
       </tr>
     </tbody>
     </Table>
+    </Col>
 			</div>
 			)
 	}

@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import { Col, Table } from 'react-bootstrap';
 import axios from 'axios';
 import convert from 'xml-to-json-promise';
 import moment from 'moment';
 import PropTypes from 'prop-types';
+import News from '../../components/News/News';
+import BSun from '../../components/News/bsun';
+import MASN from '../../components/News/masn';
+import './PageFinder.css';
 
 class PageFinder extends React.Component {
 	state = {
@@ -79,6 +84,7 @@ class PageFinder extends React.Component {
 												axios.get('http://gd2.mlb.com/components/game/mlb/' + year + '/' + month + '/' + day + '/gid_' + gameId + '/plays.json')
 
 													.then(function(response) {
+														console.log(gameId);
 														that.setState( { plays: response.data } );
 														console.log(that.state.plays.data.game.atbat.des);
 												})	
@@ -124,23 +130,51 @@ class PageFinder extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>{this.state.balGameId}</h1>
-				<h3>{this.state.awayTeam}</h3>
-				<h3>{this.state.homeTeam}</h3>
-				<h3>{this.state.awayRuns}</h3>
-				<h3>{this.state.homeRuns}</h3>
-				<h3>{this.state.awayHits}</h3>
-				<h3>{this.state.homeHits}</h3>
-				<h3>{this.state.awayErrors}</h3>
-				<h3>{this.state.homeErrors}</h3>
-				<h3>{this.state.probAwayPitch}</h3>
-				<h3>{this.state.probAwayPitchWins}</h3>
-				<h3>{this.state.probAwayPitchLosses}</h3>
-				<h3>{this.state.probAwayPitchEra}</h3>
-				<h3>{this.state.probHomePitch}</h3>
-				<h3>{this.state.probHomePitchWins}</h3>
-				<h3>{this.state.probHomePitchLosses}</h3>
-				<h3>{this.state.probHomePitchEra}</h3>
+				<Col className="pageFinder" xs={4} sm={4} md={4} lg={4}>
+					<h3>Today's Game</h3>
+					<Table responsive>
+					    <thead>
+					      <tr>
+					        <th className="scoreBoard">Teams</th>
+					        <th>Runs</th>
+					        <th>Hits</th>
+					        <th>Errors</th>
+					      </tr>
+					    </thead>
+					    <tbody>
+					      <tr>
+					        <td className="scoreBoard" >{this.state.awayTeam}</td>
+					        <td>{this.state.awayRuns}</td>
+					        <td>{this.state.awayHits}</td>
+					        <td>{this.state.awayErrors}</td>
+					      </tr>
+					      <tr>
+					        <td className="scoreBoard">{this.state.homeTeam}</td>
+					        <td>{this.state.homeRuns}</td>
+					        <td>{this.state.homeHits}</td>
+					        <td>{this.state.homeErrors}</td>
+					      </tr>
+						</tbody>
+					  </Table>
+
+					  <h4>Probable Starters</h4>
+					  	<p className="probableStarters">{this.state.probAwayPitch}
+					  		<span> </span>
+					  		<span>{this.state.probAwayPitchWins}<span>-</span></span>
+					  		<span>{this.state.probAwayPitchLosses}</span>
+					  		<span> </span>
+					  		<span>{this.state.probAwayPitchEra}</span>
+					  		<span> vs. </span>
+					  		<span>{this.state.probHomePitch}</span>
+					  		<span> {this.state.probHomePitchWins}</span>
+					  		<span>-</span>
+					  		<span>{this.state.probHomePitchLosses} </span>
+					  		<span>{this.state.probHomePitchEra}</span>
+					  	</p>
+					  	<MASN />
+        				<BSun />
+        				<News />					
+				</Col>
         	</div>
 			)
 	}

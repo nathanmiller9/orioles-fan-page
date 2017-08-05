@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Col } from 'react-bootstrap';
 import axios from 'axios';
+import './News.css';
 
 
 class News extends Component {
@@ -15,11 +16,11 @@ class News extends Component {
   }
   render () {
     return (
-      <div className="redditArticles">
+      <div className="news">
       	
-        <h1>Orioles articles on <a href="https://www.camdenchat.com/">Camden Chat</a></h1>
+        <h1 className="newsHeading">Orioles articles on <a href="https://www.camdenchat.com/">Camden Chat</a></h1>
         {
-        	this.state.cChat.map(i => <ul><a href={i.link}><li key={i.title}>{i.title}</li></a><span key={i.link}>    Link: {i.link}</span></ul>) 
+        	this.state.cChat.map(i => <a href={i.link}><p key={i.title}>{i.title}</p></a>) 
         }
         
       </div>

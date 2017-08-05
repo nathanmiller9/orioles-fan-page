@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Col } from 'react-bootstrap';
 import axios from 'axios';
+import './News.css';
 
 
 class MASN extends Component {
@@ -21,14 +22,14 @@ class MASN extends Component {
     return (
       <div className="masn">
 
-        <h1>Orioles articles on <a href="http://www.masnsports.com/orioles/">from MASN writer Roch Kubatko</a></h1>
+        <h1 className="newsHeading">Orioles articles <a href="http://www.masnsports.com/orioles/">from MASN writer Roch Kubatko</a></h1>
         {
-        	this.state.roch.map(i => <ul><a href={i.link}><li key={i.title}>{i.title}</li></a><span key={i.link}>    Link: {i.link}</span></ul>) 
+        	this.state.roch.map(i => <a href={i.link}><p key={i.title}>{i.title}</p></a>) 
         }
 
-        <h1>Orioles articles on <a href="http://www.masnsports.com/orioles/">from MASN writer Steve Melewski</a></h1>
+        <h1 className="newsHeading">Orioles articles <a href="http://www.masnsports.com/orioles/">from MASN writer Steve Melewski</a></h1>
         {
-          this.state.melewski.map(i => <ul><a href={i.link}><li key={i.title}>{i.title}</li></a><span key={i.link}>    Link: {i.link}</span></ul>) 
+          this.state.melewski.map(i => <a href={i.link}><p key={i.title}>{i.title}</p></a>) 
         }
         
       </div>

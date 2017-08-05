@@ -1,0 +1,32 @@
+.pageFinder {
+	background-color: #ff6501;
+	
+	font-family: 'Ovo', serif;
+}
+
+.home {
+	text-align: center;
+}
+
+td {
+	
+	width: 6%;
+}
+
+th {
+	
+	width: 6%;
+}
+
+.playerHead {
+	width: 13%;
+	text-align: left;
+}
+
+.scoreBoard {
+	text-align: left;
+}
+
+.probableStarters {
+	font-size: 1.2em;
+}

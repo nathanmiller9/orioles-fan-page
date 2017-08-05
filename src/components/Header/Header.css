@@ -1,5 +1,66 @@
-.heading {
-	background-color: #ff6501;
-	text-align: center;
+div {
+	
 }
 
+body {
+
+}
+
+.heading {
+	height: 300px;
+	background-color: #ff6501;
+	text-align: center;
+	background-image: url('./CamdenPan.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color: white;
+	font-family: 'IM Fell Double Pica', serif;
+
+}
+
+.headerImage {
+		
+}
+
+.leftHeaderImage {
+	height: 100%;
+	width: 45%;	
+}
+
+.centerHeaderImage {
+	height: 100%;
+	width: 52%;	
+	opacity: ;
+}
+
+.rightHeaderImage {
+	height: 100%;
+	width: 45%;	
+}
+
+.sideSection {
+	height: 90px;
+}
+
+.centerSideSection {
+	height: 120px;
+}
+
+.middleTopSection {
+	margin-top: 30px;
+	height: 90px;
+}
+
+.middleCenterSection {
+	height: 140px;
+}
+
+.middleLowSection {
+	height: 40px;
+}
+
+.subHeader {
+	margin: auto;
+	font-size: 1.5em;
+
+}
