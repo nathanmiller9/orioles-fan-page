@@ -7,7 +7,6 @@ var cookieParser = require('cookie-parser');
 
 var app = express();
 
-
 // BodyParser Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
