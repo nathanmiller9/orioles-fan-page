@@ -14,71 +14,127 @@ class Home extends React.Component {
 		aj_rbi: "",
 		aj_h: "",
 		aj_ab: "",
+		aj_double: "",
+		aj_triple: "",
+		aj_sb: "",
+		aj_r: "",
 		mm_avg: "",
 		mm_hr: "",
 		mm_rbi: "",
 		mm_h: "",
 		mm_ab: "",
+		mm_double: "",
+		mm_triple: "",
+		mm_sb: "",
+		mm_r: "",
 		js_avg: "",
 		js_hr: "",
 		js_rbi: "",
 		js_h: "",
 		js_ab: "",
+		js_double: "",
+		js_triple: "",
+		js_sb: "",
+		js_r: "",
 		mt_avg: "",
 		mt_hr: "",
 		mt_rbi: "",
 		mt_h: "",
 		mt_ab: "",
+		mt_double: "",
+		mt_triple: "",
+		mt_sb: "",
+		mt_r: "",
 		cd_avg: "",
 		cd_hr: "",
 		cd_rbi: "",
 		cd_h: "",
 		cd_ab: "",
+		cd_double: "",
+		cd_triple: "",
+		cd_sb: "",
+		cd_r: "",
 		tm_avg: "",
 		tm_hr: "",
 		tm_rbi: "",
 		tm_h: "",
 		tm_ab: "",
+		tm_double: "",
+		tm_triple: "",
+		tm_sb: "",
+		tm_r: "",
 		wc_avg: "",
 		wc_hr: "",
 		wc_rbi: "",
 		wc_h: "",
 		wc_ab: "",
+		wc_double: "",
+		wc_triple: "",
+		wc_sb: "",
+		wc_r: "",
 		ss_avg: "",
 		ss_hr: "",
 		ss_rbi: "",
 		ss_h: "",
 		ss_ab: "",
+		ss_double: "",
+		ss_triple: "",
+		ss_sb: "",
+		ss_r: "",
 		jr_avg: "",
 		jr_hr: "",
 		jr_rbi: "",
 		jr_h: "",
 		jr_ab: "",
+		jr_double: "",
+		jr_triple: "",
+		jr_sb: "",
+		jr_r: "",
 		cj_avg: "",
 		cj_hr: "",
 		cj_rbi: "",
 		cj_h: "",
 		cj_ab: "",
+		cj_double: "",
+		cj_triple: "",
+		cj_sb: "",
+		cj_r: "",
 		tb_avg: "",
 		tb_hr: "",
 		tb_rbi: "",
 		tb_h: "",
 		tb_ab: "",
+		tb_double: "",
+		tb_triple: "",
+		tb_sb: "",
+		tb_r: "",
 		rt_avg: "",
 		rt_hr: "",
 		rt_rbi: "",
 		rt_h: "",
 		rt_ab: "",
+		rt_double: "",
+		rt_triple: "",
+		rt_sb: "",
+		rt_r: "",
 		cg_avg: "",
 		cg_hr: "",
 		cg_rbi: "",
 		cg_h: "",
 		cg_ab: "",
+		cg_double: "",
+		cg_triple: "",
+		cg_sb: "",
+		cg_r: "",
 		rf_avg: "",
 		rf_hr: "",
 		rf_rbi: "",
 		rf_h: "",
 		rf_ab: "",
+		rf_double: "",
+		rf_triple: "",
+		rf_sb: "",
+		rf_r: "",
 		db_w: "",
 		db_l: "",
 		db_era: "",
@@ -300,6 +356,10 @@ class Home extends React.Component {
 				that.setState( {aj_rbi: json.batting.$["s_rbi"] } );
 				that.setState( {aj_h: json.batting.$["s_h"] } );
 				that.setState( {aj_ab: json.batting.$["s_ab"] } );
+				that.setState( {aj_double: json.batting.$["s_double"] } );
+				that.setState( {aj_triple: json.batting.$["s_triple"] } );
+				that.setState( {aj_sb: json.batting.$["s_sb"] } );
+				that.setState( {aj_r: json.batting.$["s_r"] } );
 			});
 		})
 
@@ -312,6 +372,10 @@ class Home extends React.Component {
 				that.setState( {mm_rbi: json.batting.$["s_rbi"] } );
 				that.setState( {mm_h: json.batting.$["s_h"] } );
 				that.setState( {mm_ab: json.batting.$["s_ab"] } );
+				that.setState( {mm_double: json.batting.$["s_double"] } );
+				that.setState( {mm_triple: json.batting.$["s_triple"] } );
+				that.setState( {mm_sb: json.batting.$["s_sb"] } );
+				that.setState( {mm_r: json.batting.$["s_r"] } );
 		})
 		.catch(function(error) {
 			console.log(error);
@@ -327,6 +391,10 @@ class Home extends React.Component {
 				that.setState( {js_rbi: json.batting.$["s_rbi"] } );
 				that.setState( {js_h: json.batting.$["s_h"] } );
 				that.setState( {js_ab: json.batting.$["s_ab"] } );
+				that.setState( {js_double: json.batting.$["s_double"] } );
+				that.setState( {js_triple: json.batting.$["s_triple"] } );
+				that.setState( {js_sb: json.batting.$["s_sb"] } );
+				that.setState( {js_r: json.batting.$["s_r"] } );
 		})
 
 		.catch(function(error) {
@@ -343,6 +411,10 @@ class Home extends React.Component {
 				that.setState( {mt_rbi: json.batting.$["s_rbi"] } );
 				that.setState( {mt_h: json.batting.$["s_h"] } );
 				that.setState( {mt_ab: json.batting.$["s_ab"] } );
+				that.setState( {mt_double: json.batting.$["s_double"] } );
+				that.setState( {mt_triple: json.batting.$["s_triple"] } );
+				that.setState( {mt_sb: json.batting.$["s_sb"] } );
+				that.setState( {mt_r: json.batting.$["s_r"] } );
 		})
 		.catch(function(error) {
 			console.log(error);
@@ -358,6 +430,10 @@ class Home extends React.Component {
 				that.setState( {cd_rbi: json.batting.$["s_rbi"] } );
 				that.setState( {cd_h: json.batting.$["s_h"] } );
 				that.setState( {cd_ab: json.batting.$["s_ab"] } );
+				that.setState( {cd_double: json.batting.$["s_double"] } );
+				that.setState( {cd_triple: json.batting.$["s_triple"] } );
+				that.setState( {cd_sb: json.batting.$["s_sb"] } );
+				that.setState( {cd_r: json.batting.$["s_r"] } );
 		})
 		.catch(function(error) {
 			console.log(error);
@@ -373,6 +449,10 @@ class Home extends React.Component {
 				that.setState( {tm_rbi: json.batting.$["s_rbi"] } );
 				that.setState( {tm_h: json.batting.$["s_h"] } );
 				that.setState( {tm_ab: json.batting.$["s_ab"] } );
+				that.setState( {tm_double: json.batting.$["s_double"] } );
+				that.setState( {tm_triple: json.batting.$["s_triple"] } );
+				that.setState( {tm_sb: json.batting.$["s_sb"] } );
+				that.setState( {tm_r: json.batting.$["s_r"] } );
 		})
 
 		.catch(function(error) {
@@ -389,6 +469,10 @@ class Home extends React.Component {
 				that.setState( {wc_rbi: json.batting.$["s_rbi"] } );
 				that.setState( {wc_h: json.batting.$["s_h"] } );
 				that.setState( {wc_ab: json.batting.$["s_ab"] } );
+				that.setState( {wc_double: json.batting.$["s_double"] } );
+				that.setState( {wc_triple: json.batting.$["s_triple"] } );
+				that.setState( {wc_sb: json.batting.$["s_sb"] } );
+				that.setState( {wc_r: json.batting.$["s_r"] } );
 		})
 		.catch(function(error) {
 			console.log(error);
@@ -404,6 +488,10 @@ class Home extends React.Component {
 				that.setState( {ss_rbi: json.batting.$["s_rbi"] } );
 				that.setState( {ss_h: json.batting.$["s_h"] } );
 				that.setState( {ss_ab: json.batting.$["s_ab"] } );
+				that.setState( {ss_double: json.batting.$["s_double"] } );
+				that.setState( {ss_triple: json.batting.$["s_triple"] } );
+				that.setState( {ss_sb: json.batting.$["s_sb"] } );
+				that.setState( {ss_r: json.batting.$["s_r"] } );
 		})
 
 		.catch(function(error) {
@@ -420,6 +508,10 @@ class Home extends React.Component {
 				that.setState( {jr_rbi: json.batting.$["s_rbi"] } );
 				that.setState( {jr_h: json.batting.$["s_h"] } );
 				that.setState( {jr_ab: json.batting.$["s_ab"] } );
+				that.setState( {jr_double: json.batting.$["s_double"] } );
+				that.setState( {jr_triple: json.batting.$["s_triple"] } );
+				that.setState( {jr_sb: json.batting.$["s_sb"] } );
+				that.setState( {jr_r: json.batting.$["s_r"] } );
 		})
 		.catch(function(error) {
 			console.log(error);
@@ -435,6 +527,10 @@ class Home extends React.Component {
 				that.setState( {cj_rbi: json.batting.$["s_rbi"] } );
 				that.setState( {cj_h: json.batting.$["s_h"] } );
 				that.setState( {cj_ab: json.batting.$["s_ab"] } );
+				that.setState( {cj_double: json.batting.$["s_double"] } );
+				that.setState( {cj_triple: json.batting.$["s_triple"] } );
+				that.setState( {cj_sb: json.batting.$["s_sb"] } );
+				that.setState( {cj_r: json.batting.$["s_r"] } );
 		})
 		.catch(function(error) {
 			console.log(error);
@@ -450,6 +546,10 @@ class Home extends React.Component {
 				that.setState( {tb_rbi: json.batting.$["s_rbi"] } );
 				that.setState( {tb_h: json.batting.$["s_h"] } );
 				that.setState( {tb_ab: json.batting.$["s_ab"] } );
+				that.setState( {tb_double: json.batting.$["s_double"] } );
+				that.setState( {tb_triple: json.batting.$["s_triple"] } );
+				that.setState( {tb_sb: json.batting.$["s_sb"] } );
+				that.setState( {tb_r: json.batting.$["s_r"] } );
 		})
 		.catch(function(error) {
 			console.log(error);
@@ -465,6 +565,10 @@ class Home extends React.Component {
 				that.setState( {rt_rbi: json.batting.$["s_rbi"] } );
 				that.setState( {rt_h: json.batting.$["s_h"] } );
 				that.setState( {rt_ab: json.batting.$["s_ab"] } );
+				that.setState( {rt_double: json.batting.$["s_double"] } );
+				that.setState( {rt_triple: json.batting.$["s_triple"] } );
+				that.setState( {rt_sb: json.batting.$["s_sb"] } );
+				that.setState( {rt_r: json.batting.$["s_r"] } );
 		})
 		.catch(function(error) {
 			console.log(error);
@@ -480,6 +584,10 @@ class Home extends React.Component {
 				that.setState( {cg_rbi: json.batting.$["s_rbi"] } );
 				that.setState( {cg_h: json.batting.$["s_h"] } );
 				that.setState( {cg_ab: json.batting.$["s_ab"] } );
+				that.setState( {cg_double: json.batting.$["s_double"] } );
+				that.setState( {cg_triple: json.batting.$["s_triple"] } );
+				that.setState( {cg_sb: json.batting.$["s_sb"] } );
+				that.setState( {cg_r: json.batting.$["s_r"] } );
 		})
 		.catch(function(error) {
 			console.log(error);
@@ -495,6 +603,10 @@ class Home extends React.Component {
 				that.setState( {rf_rbi: json.batting.$["s_rbi"] } );
 				that.setState( {rf_h: json.batting.$["s_h"] } );
 				that.setState( {rf_ab: json.batting.$["s_ab"] } );
+				that.setState( {rf_double: json.batting.$["s_double"] } );
+				that.setState( {rf_triple: json.batting.$["s_triple"] } );
+				that.setState( {rf_sb: json.batting.$["s_sb"] } );
+				that.setState( {rf_r: json.batting.$["s_r"] } );
 		})
 		.catch(function(error) {
 			console.log(error);
@@ -510,6 +622,10 @@ class Home extends React.Component {
 				that.setState( {jh_rbi: json.batting.$["s_rbi"] } );
 				that.setState( {jh_h: json.batting.$["s_h"] } );
 				that.setState( {jh_ab: json.batting.$["s_ab"] } );
+				that.setState( {jh_double: json.batting.$["s_double"] } );
+				that.setState( {jh_triple: json.batting.$["s_triple"] } );
+				that.setState( {jh_sb: json.batting.$["s_sb"] } );
+				that.setState( {jh_r: json.batting.$["s_r"] } );
 		})
 		.catch(function(error) {
 			console.log(error);
@@ -794,10 +910,10 @@ class Home extends React.Component {
         <th>HR</th>
         <th>H</th>
         <th>AB</th>
-        <th>Average</th>
-        <th>RBI</th>
-        <th>HR</th>
-        <th>H</th>
+        <th>Doubles</th>
+        <th>Triples</th>
+        <th>SB</th>
+        <th>Runs</th>
       </tr>
     </thead>
     <tbody>
@@ -808,10 +924,10 @@ class Home extends React.Component {
         <td>{ this.state.aj_rbi } </td>
         <td>{ this.state.aj_h }</td>
         <td>{ this.state.aj_ab } </td>
-        <td>{ this.state.aj_avg } </td>
-        <td>{ this.state.aj_hr } </td>
-        <td>{ this.state.aj_rbi } </td>
-        <td>{ this.state.aj_h }</td>
+        <td>{ this.state.aj_double } </td>
+        <td>{ this.state.aj_triple } </td>
+        <td>{ this.state.aj_sb } </td>
+        <td>{ this.state.aj_r }</td>
       </tr>
       <tr>
         <td className="playerHead">Manny Machado</td>
@@ -820,10 +936,10 @@ class Home extends React.Component {
         <td>{ this.state.mm_rbi } </td>
         <td>{ this.state.mm_h }</td>
         <td>{ this.state.mm_ab } </td>
-        <td>{ this.state.mm_avg } </td>
-        <td>{ this.state.mm_hr } </td>
-        <td>{ this.state.mm_rbi } </td>
-        <td>{ this.state.mm_h }</td>
+        <td>{ this.state.mm_double } </td>
+        <td>{ this.state.mm_triple } </td>
+        <td>{ this.state.mm_sb } </td>
+        <td>{ this.state.mm_r }</td>
       </tr>
       <tr>
         <td className="playerHead">Jonathan Schoop</td>
@@ -832,10 +948,10 @@ class Home extends React.Component {
         <td>{ this.state.js_rbi } </td>
         <td>{ this.state.js_h }</td>
         <td>{ this.state.js_ab } </td>
-        <td>{ this.state.js_avg } </td>
-        <td>{ this.state.js_hr } </td>
-        <td>{ this.state.js_rbi } </td>
-        <td>{ this.state.js_h }</td>
+        <td>{ this.state.js_double } </td>
+        <td>{ this.state.js_triple } </td>
+        <td>{ this.state.js_sb } </td>
+        <td>{ this.state.js_r }</td>
       </tr>
       <tr>
         <td className="playerHead">Chris Davis</td>
@@ -844,10 +960,10 @@ class Home extends React.Component {
         <td>{ this.state.cd_rbi } </td>
         <td>{ this.state.cd_h }</td>
         <td>{ this.state.cd_ab } </td>
-        <td>{ this.state.cd_avg } </td>
-        <td>{ this.state.cd_hr } </td>
-        <td>{ this.state.cd_rbi } </td>
-        <td>{ this.state.cd_h }</td>
+        <td>{ this.state.cd_double } </td>
+        <td>{ this.state.cd_triple } </td>
+        <td>{ this.state.cd_sb } </td>
+        <td>{ this.state.cd_r }</td>
       </tr>
       <tr>
         <td className="playerHead">Mark Trumbo</td>
@@ -856,10 +972,10 @@ class Home extends React.Component {
         <td>{ this.state.mt_rbi } </td>
         <td>{ this.state.mt_h }</td>
         <td>{ this.state.mt_ab } </td>
-        <td>{ this.state.mt_avg } </td>
-        <td>{ this.state.mt_hr } </td>
-        <td>{ this.state.mt_rbi } </td>
-        <td>{ this.state.mt_h }</td>
+        <td>{ this.state.mt_double } </td>
+        <td>{ this.state.mt_triple } </td>
+        <td>{ this.state.mt_sb } </td>
+        <td>{ this.state.mt_r }</td>
       </tr>
       <tr>
         <td className="playerHead">Trey Mancini</td>
@@ -868,10 +984,10 @@ class Home extends React.Component {
         <td>{ this.state.tm_rbi } </td>
         <td>{ this.state.tm_h }</td>
         <td>{ this.state.tm_ab } </td>
-        <td>{ this.state.tm_avg } </td>
-        <td>{ this.state.tm_hr } </td>
-        <td>{ this.state.tm_rbi } </td>
-        <td>{ this.state.tm_h }</td>
+        <td>{ this.state.tm_double } </td>
+        <td>{ this.state.tm_triple } </td>
+        <td>{ this.state.tm_sb } </td>
+        <td>{ this.state.tm_r }</td>
       </tr>
       <tr>
         <td className="playerHead">Welington Castillo</td>
@@ -880,10 +996,10 @@ class Home extends React.Component {
         <td>{ this.state.wc_rbi } </td>
         <td>{ this.state.wc_h }</td>
         <td>{ this.state.wc_ab } </td>
-        <td>{ this.state.wc_avg } </td>
-        <td>{ this.state.wc_hr } </td>
-        <td>{ this.state.wc_rbi } </td>
-        <td>{ this.state.wc_h }</td>
+        <td>{ this.state.wc_double } </td>
+        <td>{ this.state.wc_triple } </td>
+        <td>{ this.state.wc_sb } </td>
+        <td>{ this.state.wc_r }</td>
       </tr>
       <tr>
         <td className="playerHead">Seth Smith</td>
@@ -892,10 +1008,10 @@ class Home extends React.Component {
         <td>{ this.state.ss_rbi } </td>
         <td>{ this.state.ss_h }</td>
         <td>{ this.state.ss_ab } </td>
-        <td>{ this.state.ss_avg } </td>
-        <td>{ this.state.ss_hr } </td>
-        <td>{ this.state.ss_rbi } </td>
-        <td>{ this.state.ss_h }</td>
+        <td>{ this.state.ss_double } </td>
+        <td>{ this.state.ss_triple } </td>
+        <td>{ this.state.ss_sb } </td>
+        <td>{ this.state.ss_r }</td>
       </tr>
       <tr>
         <td className="playerHead">Joey Rickard</td>
@@ -904,10 +1020,10 @@ class Home extends React.Component {
         <td>{ this.state.jr_rbi } </td>
         <td>{ this.state.jr_h }</td>
         <td>{ this.state.jr_ab } </td>
-        <td>{ this.state.jr_avg } </td>
-        <td>{ this.state.jr_hr } </td>
-        <td>{ this.state.jr_rbi } </td>
-        <td>{ this.state.jr_h }</td>
+        <td>{ this.state.jr_double } </td>
+        <td>{ this.state.jr_triple } </td>
+        <td>{ this.state.jr_sb } </td>
+        <td>{ this.state.jr_r }</td>
       </tr>
       <tr>
         <td className="playerHead">Caleb Joseph</td>
@@ -916,10 +1032,10 @@ class Home extends React.Component {
         <td>{ this.state.cj_rbi } </td>
         <td>{ this.state.cj_h }</td>
         <td>{ this.state.cj_ab } </td>
-        <td>{ this.state.cj_avg } </td>
-        <td>{ this.state.cj_hr } </td>
-        <td>{ this.state.cj_rbi } </td>
-        <td>{ this.state.cj_h }</td>
+        <td>{ this.state.cj_double } </td>
+        <td>{ this.state.cj_triple } </td>
+        <td>{ this.state.cj_sb } </td>
+        <td>{ this.state.cj_r }</td>
       </tr>
       <tr>
         <td className="playerHead">Tim Beckham</td>
@@ -928,10 +1044,10 @@ class Home extends React.Component {
         <td>{ this.state.tb_rbi } </td>
         <td>{ this.state.tb_h }</td>
         <td>{ this.state.tb_ab } </td>
-        <td>{ this.state.tb_avg } </td>
-        <td>{ this.state.tb_hr } </td>
-        <td>{ this.state.tb_rbi } </td>
-        <td>{ this.state.tb_h }</td>
+        <td>{ this.state.tb_double } </td>
+        <td>{ this.state.tb_triple } </td>
+        <td>{ this.state.tb_sb } </td>
+        <td>{ this.state.tb_r }</td>
       </tr>
       <tr>
         <td className="playerHead">Ruben Tejada</td>
@@ -940,10 +1056,10 @@ class Home extends React.Component {
         <td>{ this.state.rt_rbi } </td>
         <td>{ this.state.rt_h }</td>
         <td>{ this.state.rt_ab } </td>
-        <td>{ this.state.rt_avg } </td>
-        <td>{ this.state.rt_hr } </td>
-        <td>{ this.state.rt_rbi } </td>
-        <td>{ this.state.rt_h }</td>
+        <td>{ this.state.rt_double } </td>
+        <td>{ this.state.rt_triple } </td>
+        <td>{ this.state.rt_sb } </td>
+        <td>{ this.state.rt_r }</td>
       </tr>
       <tr>
         <td className="playerHead">Craig Gentry</td>
@@ -952,10 +1068,10 @@ class Home extends React.Component {
         <td>{ this.state.cg_rbi } </td>
         <td>{ this.state.cg_h }</td>
         <td>{ this.state.cg_ab } </td>
-        <td>{ this.state.cg_avg } </td>
-        <td>{ this.state.cg_hr } </td>
-        <td>{ this.state.cg_rbi } </td>
-        <td>{ this.state.cg_h }</td>
+        <td>{ this.state.cg_double } </td>
+        <td>{ this.state.cg_triple } </td>
+        <td>{ this.state.cg_sb } </td>
+        <td>{ this.state.cg_r }</td>
       </tr>
       <tr>
         <td className="playerHead">Ryan Flaherty</td>
@@ -964,10 +1080,10 @@ class Home extends React.Component {
         <td>{ this.state.rf_rbi } </td>
         <td>{ this.state.rf_h }</td>
         <td>{ this.state.rf_ab } </td>
-        <td>{ this.state.rf_avg } </td>
-        <td>{ this.state.rf_hr } </td>
-        <td>{ this.state.rf_rbi } </td>
-        <td>{ this.state.rf_h }</td>
+        <td>{ this.state.rf_double } </td>
+        <td>{ this.state.rf_triple } </td>
+        <td>{ this.state.rf_sb } </td>
+        <td>{ this.state.rf_r }</td>
       </tr>
       <tr>
         <td className="playerHead">JJ Hardy</td>
@@ -976,10 +1092,10 @@ class Home extends React.Component {
         <td>{ this.state.jh_rbi } </td>
         <td>{ this.state.jh_h }</td>
         <td>{ this.state.jh_ab } </td>
-        <td>{ this.state.jh_avg } </td>
-        <td>{ this.state.jh_hr } </td>
-        <td>{ this.state.jh_rbi } </td>
-        <td>{ this.state.jh_h }</td>
+        <td>{ this.state.jh_double } </td>
+        <td>{ this.state.jh_triple } </td>
+        <td>{ this.state.jh_sb } </td>
+        <td>{ this.state.jh_r }</td>
       </tr>
     </tbody>
   </Table>

@@ -30,3 +30,11 @@ th {
 .probableStarters {
 	font-size: 1.2em;
 }
+
+#game {
+	display: none;
+}
+
+#pregame {
+	display: none;
+}

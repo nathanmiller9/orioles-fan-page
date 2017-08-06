@@ -38,7 +38,13 @@ class PageFinder extends React.Component {
 		probHomePitchWins: "",
 		probHomePitchLosses: "",
 		probHomePitchEra: "",
-		plays: []
+		plays: [],
+		currentBatter: "",
+		currentBatterAvg: "",
+		currentPitcher: "",
+		currentPitcherEra: "",
+		game: "game",
+		pregame: "pregame"
 	}; 
 	componentWillMount(){
 				let that = this;
@@ -80,6 +86,11 @@ class PageFinder extends React.Component {
 											that.setState ( { awayHits: that.state.boxscore.data.game.away_team_hits } );
 											that.setState ( { homeErrors: that.state.boxscore.data.game.home_team_errors } );
 											that.setState ( { awayErrors: that.state.boxscore.data.game.away_team_errors } );
+											that.setState ( { currentBatter: that.state.boxscore.data.game.current_batter.last_name } );
+											that.setState ( { currentBatterAvg: that.state.boxscore.data.game.current_batter.avg } );
+											that.setState ( { currentPitcher: that.state.boxscore.data.game.current_pitcher.last_name } );
+											that.setState ( { currentPitcherEra: that.state.boxscore.data.game.current_pitcher.era } );
+											that.setState ( { game: " " } );
 
 												axios.get('http://gd2.mlb.com/components/game/mlb/' + year + '/' + month + '/' + day + '/gid_' + gameId + '/plays.json')
 
@@ -98,6 +109,7 @@ class PageFinder extends React.Component {
 										}
 									else 
 										{   
+											that.setState ( { pregame: " " });
 											that.setState ( { probAwayPitch: that.state.boxscore.data.game.away_probable_pitcher.last } );
 											that.setState ( { probAwayPitchWins: that.state.boxscore.data.game.away_probable_pitcher.s_wins } );
 											that.setState ( { probAwayPitchLosses: that.state.boxscore.data.game.away_probable_pitcher.s_losses } );
@@ -106,6 +118,7 @@ class PageFinder extends React.Component {
 											that.setState ( { probHomePitchWins: that.state.boxscore.data.game.home_probable_pitcher.s_wins } );
 											that.setState ( { probHomePitchLosses: that.state.boxscore.data.game.home_probable_pitcher.s_losses } );
 											that.setState ( { probHomePitchEra: that.state.boxscore.data.game.home_probable_pitcher.s_era } );
+
 
 										}
 							})
@@ -154,11 +167,18 @@ class PageFinder extends React.Component {
 					        <td>{this.state.homeHits}</td>
 					        <td>{this.state.homeErrors}</td>
 					      </tr>
+					      <tr id={this.state.game}>
+					        <td className="scoreBoard">{this.state.currentBatter}</td>
+					        <td>{this.state.currentBatterAvg}</td>
+					        <td>{this.state.currentPitcher}</td>
+					        <td>{this.state.currentPitcherEra}</td>
+					      </tr>
+
 						</tbody>
 					  </Table>
 
-					  <h4>Probable Starters</h4>
-					  	<p className="probableStarters">{this.state.probAwayPitch}
+					  <h4 id={this.state.pregame}>Probable Starters</h4>
+					  	<p id={this.state.pregame} className="probableStarters">{this.state.probAwayPitch}
 					  		<span> </span>
 					  		<span>{this.state.probAwayPitchWins}<span>-</span></span>
 					  		<span>{this.state.probAwayPitchLosses}</span>
