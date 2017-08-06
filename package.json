@@ -37,7 +37,7 @@
     "stylus": "0.54.5"
   },
   "scripts": {
-    "start": "concurrently \" react-scripts start\" \"node server\"",
+    "start": "concurrently \" react-scripts start\" \"node server.js\"",
     "watch": "concurrently --names \"webpack, stylus\" --prefix name \"npm run start\" \"npm run styles:watch\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -46,5 +46,7 @@
   },
   "eslintConfig": {
     "extends": "./node_modules/react-scripts/.eslintrc"
-  }
+  },
+  "author": "Nathan Miller",
+  "license": "ISC"
 }
