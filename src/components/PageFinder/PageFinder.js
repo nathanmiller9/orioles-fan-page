@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Col, Table } from 'react-bootstrap';
 import axios from 'axios';
 import convert from 'xml-to-json-promise';
 import moment from 'moment';
-import PropTypes from 'prop-types';
 import News from '../../components/News/News';
 import BSun from '../../components/News/bsun';
 import MASN from '../../components/News/masn';

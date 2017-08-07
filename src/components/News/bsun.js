@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Col } from 'react-bootstrap';
 import axios from 'axios';
 import './News.css';
 
@@ -20,7 +19,7 @@ class BSun extends Component {
 
         <h1 className="newsHeading">Orioles articles on <a href="http://www.baltimoresun.com/sports/orioles/blog/">The Baltimore Sun Orioles Blog</a></h1>
         {
-        	this.state.bsun.map(i => <a href={i.link}><p key={i.title}>{i.title}</p></a>) 
+        	this.state.bsun.map(i => <a key={i.link} href={i.link}><p key={i.title}>{i.title}</p></a>) 
         }
         
       </div>

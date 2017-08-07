@@ -7,13 +7,23 @@ var cookieParser = require('cookie-parser');
 
 var app = express();
 
+// Set Port
+app.set('port', process.env.PORT || 5000);
+
 // BodyParser Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Set Static Folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname, '/public'));
+
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+
+app.get('/', function(request, response) {
+  response.render('pages/index')
+});
 
 // Global Vars
 app.use(function(req, res, next) {
@@ -27,7 +37,7 @@ app.use(function(req, res, next) {
 app.get('/cChatResult2', function (req, res) {
    console.log("\n***********************************\n" +
             "Grabbing every thread name and link\n" +
-            "from reddit's webdev board:" +
+            "from cChat's webdev board:" +
             "\n***********************************\n");
   // Making a request call for reddit's "CryptoCurrency" board. The page's HTML is saved as the callback's third argument
   request("https://www.camdenchat.com/", function(error, response, html) {
@@ -60,7 +70,7 @@ app.get('/cChatResult2', function (req, res) {
 app.get('/bsun', function (req, res) {
    console.log("\n***********************************\n" +
             "Grabbing every thread name and link\n" +
-            "from baltimore sun's orioles blog:" +
+            "from Baltimore Sun's orioles blog:" +
             "\n***********************************\n");
   // Making a request call for reddit's "CryptoCurrency" board. The page's HTML is saved as the callback's third argument
   request("http://www.baltimoresun.com/sports/orioles/blog/", function(error, response, html) {
@@ -78,7 +88,7 @@ app.get('/bsun', function (req, res) {
       console.log("title", $(this).children('div').attr('data-sc-ti'));
       // In the currently selected element, look at its child elements (i.e., its a-tags),
       // then save the values for any "href" attributes that the child elements may have
-      var link = $(this).children('div').attr('data-sc-url');
+      var link = "http://www.baltimoresun.com" + $(this).children('div').attr('data-sc-url');
       console.log("console logging this", $(this).children('div').attr('data-sc-url'));
 
       // Save these results in an object that we'll push into the result array we defined earlier
@@ -162,9 +172,6 @@ app.get('/melewski', function (req, res) {
 app.get('*', function (req, res) {
   res.sendFile('index.html');
 });
-
-// Set Port
-app.set('port', process.env.PORT || 3001);
 
 app.listen(app.get('port'), function () {
   console.log('Server started on port ' + app.get('port'));

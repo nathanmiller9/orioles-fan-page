@@ -11,7 +11,7 @@ class Header extends React.Component {
           <Col className="sideSection" xs={12} sm={12} md={12} lg={12}>
           </Col>
           <Col className="centerSideSection" xs={12} sm={12} md={12} lg={12}>
-            <img className="headerImage centerHeaderImage" src={require("./BaltimoreOriolesCap.PNG")}/>
+            <img className="headerImage centerHeaderImage" src={require("./BaltimoreOriolesCap.PNG")} alt="Orioles cartoon logo"/>
           </Col>
           <Col className="sideSection" xs={12} sm={12} md={12} lg={12}>
           </Col>  
@@ -19,7 +19,7 @@ class Header extends React.Component {
 
         <Col xs={6} sm={6} md={6} lg={6}>
           <Col className="middleTopSection" xs={12} sm={12} md={12} lg={12}>
-            <img className="headerImage centerHeaderImage" src={require("./Baltimore-Orioles-Logo.gif")}/>
+            <img className="headerImage centerHeaderImage" src={require("./Baltimore-Orioles-Logo.gif")} alt="Orioles text logo with baseball diamond"/>
           </Col>
           <Col className="middleCenterSection" xs={12} sm={12} md={12} lg={12}>
             
@@ -37,7 +37,7 @@ class Header extends React.Component {
           <Col className="sideSection" xs={12} sm={12} md={12} lg={12}>
           </Col>
           <Col className="centerSideSection" xs={12} sm={12} md={12} lg={12}>
-            <img className="headerImage rightHeaderImage" src={require("./AdamJones.png")}/>
+            <img className="headerImage rightHeaderImage" src={require("./AdamJones.png")} alt="Adam Jones swinging the bat"/>
           </Col>
           <Col className="sideSection" xs={12} sm={12} md={12} lg={12}>
           </Col>  

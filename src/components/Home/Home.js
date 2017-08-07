@@ -3,8 +3,6 @@ import { Col, Table } from 'react-bootstrap';
 import axios from 'axios';
 import convert from 'xml-to-json-promise';
 import './Home.css';
-import moment from 'moment';
-import PropTypes from 'prop-types';
 
 class Home extends React.Component {
 	state = {
