@@ -7,8 +7,7 @@ var cookieParser = require('cookie-parser');
 
 var app = express();
 
-// Set Port
-app.set('port', process.env.PORT || 5000);
+
 
 // BodyParser Middleware
 app.use(bodyParser.json());
@@ -172,6 +171,9 @@ app.get('/melewski', function (req, res) {
 app.get('*', function (req, res) {
   res.sendFile('index.html');
 });
+
+// Set Port
+app.set('port', process.env.PORT || 3001);
 
 app.listen(app.get('port'), function () {
   console.log('Server started on port ' + app.get('port'));
