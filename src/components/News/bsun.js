@@ -9,7 +9,7 @@ class BSun extends Component {
   }
   componentWillMount(){
   	let that = this;
-  	axios.get('http://localhost:3001/bsun').then(function (response) {
+  	axios.get('https://localhost:3000/bsun').then(function (response) {
   		that.setState({bsun:response.data})
   	})
   }
@@ -17,7 +17,7 @@ class BSun extends Component {
     return (
       <div className="bsun">
 
-        <h1 className="newsHeading">Orioles articles on <a href="http://www.baltimoresun.com/sports/orioles/blog/">The Baltimore Sun Orioles Blog</a></h1>
+        <h1 className="newsHeading">Orioles articles on <a href="https://www.baltimoresun.com/sports/orioles/blog/">The Baltimore Sun Orioles Blog</a></h1>
         {
         	this.state.bsun.map(i => <a key={i.link} href={i.link}><p key={i.title}>{i.title}</p></a>) 
         }

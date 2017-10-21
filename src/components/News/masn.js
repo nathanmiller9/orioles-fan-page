@@ -8,12 +8,12 @@ class MASN extends Component {
   	roch: [],
     melewski: []
   }
-  componentWillMount(){
+  componentDidMount(){
   	let that = this;
-  	axios.get('http://localhost:3001/roch').then(function (response) {
+  	axios.get('/roch').then(function (response) {
   		that.setState({roch:response.data})
   	})
-    axios.get('http://localhost:3001/melewski').then(function (response) {
+    axios.get('/melewski').then(function (response) {
       that.setState({melewski:response.data})
     })
   }

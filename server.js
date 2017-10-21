@@ -16,7 +16,6 @@ app.use(cookieParser());
 
 // Set Static Folder
 app.use(express.static(__dirname, '/public'));
-
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
@@ -72,7 +71,7 @@ app.get('/bsun', function (req, res) {
             "from Baltimore Sun's orioles blog:" +
             "\n***********************************\n");
   // Making a request call for reddit's "CryptoCurrency" board. The page's HTML is saved as the callback's third argument
-  request("http://www.baltimoresun.com/sports/orioles/blog/", function(error, response, html) {
+  request("https://www.baltimoresun.com/sports/orioles/blog/", function(error, response, html) {
     // Load the HTML into cheerio and save it to a variable
     // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
     var $ = cheerio.load(html);
@@ -106,7 +105,7 @@ app.get('/roch', function (req, res) {
             "from MASN's Roch Kubatko Orioles Coverage:" +
             "\n***********************************\n");
   // Making a request call for reddit's "CryptoCurrency" board. The page's HTML is saved as the callback's third argument
-  request("http://www.masnsports.com/school-of-roch/", function(error, response, html) {
+  request("https://www.masnsports.com/school-of-roch/", function(error, response, html) {
     // Load the HTML into cheerio and save it to a variable
     // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
     var $ = cheerio.load(html);
@@ -140,7 +139,7 @@ app.get('/melewski', function (req, res) {
             "from MASN's Steve Melewski Orioles Coverage:" +
             "\n***********************************\n");
   // Making a request call for reddit's "CryptoCurrency" board. The page's HTML is saved as the callback's third argument
-  request("http://www.masnsports.com/steve-melewski/", function(error, response, html) {
+  request("https://www.masnsports.com/steve-melewski/", function(error, response, html) {
     // Load the HTML into cheerio and save it to a variable
     // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
     var $ = cheerio.load(html);
@@ -173,7 +172,7 @@ app.get('/', function (req, res) {
 });
 
 // Set Port
-app.set('port', process.env.PORT || 3001);
+app.set('port', process.env.PORT || 3000);
 
 app.listen(app.get('port'), function () {
   console.log('Server started on port ' + app.get('port'));

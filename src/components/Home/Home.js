@@ -345,7 +345,7 @@ class Home extends React.Component {
 		];
 
 		let that = this;
-		axios.get('http://gd2.mlb.com/components/game/mlb/year_2017/batters/' + batters[0]["id"] + '.xml')
+		axios.get('https://gd2.mlb.com/components/game/mlb/year_2017/batters/' + batters[0]["id"] + '.xml')
 		.then(function(response) {
 			that.setState( { mlb: response.data } );
 			convert.xmlDataToJSON(that.state.mlb).then(json => {
